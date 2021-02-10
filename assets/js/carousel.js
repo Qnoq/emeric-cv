@@ -82,3 +82,17 @@ $('#demons').on('click', function() {
 $('#dirt').on('click', function() {
     $('body').css('background-image', 'url(assets/images/bg-dirt-5.png')
 });
+
+function afficher() {
+    var offsetUTC = +12,
+        lD = new Date(),
+        oD = new Date();
+    oD.setHours(lD.getUTCHours() + offsetUTC);
+
+    $('.time').html(lD.toLocaleString());
+}
+
+window.onload = function() {
+    afficher();
+    setInterval(afficher, 1000);
+}
