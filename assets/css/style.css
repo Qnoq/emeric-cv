@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    font-family: "Poppins";
+    background-size: cover;
+    background-image: url(/assets/images/bg-XIII.png);
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 2.5em 1em;
+}
+
+header .right {
+    display: flex;
+    align-items: center;
+}
+
+header .left a:nth-child(1) {
+    color: white !important;
+}
+
+header a {
+    color: #adadad;
+    font-size: 2em;
+}
+
+header .right a {
+    margin-right: 70px;
+    display: flex;
+}
+
+header .left a {
+    margin-right: 80px;
+}
+
+.right a img {
+    height: 50px;
+    border-radius: 50px;
+}
+
+header .time {
+    color: white;
+    font-size: 2em;
+    font-weight: 200;
+}
+
+
+/* CAROUSEL */
+
+#carousel {
+    position: relative;
+    height: 85%;
+}
+
+#carousel>div {
+    position: absolute;
+    transition: transform 0.4s, left 0.4s, opacity 0.4s, z-index 0s;
+    opacity: 1;
+}
+
+#carousel section img {
+    border-radius: 30px;
+    width: 150px;
+    transition: width 0.4s;
+    cursor: pointer;
+}
+
+#carousel .selected section img {
+    border: transparent solid 1px;
+    box-shadow: 0px 0px 0px 3px white;
+}
+
+#carousel .hideLeft {
+    left: -190px;
+    /* opacity: 0; */
+}
+
+#carousel .hideLeft img {
+    width: 110px;
+}
+
+#carousel .hideRight {
+    left: 685px;
+    /* opacity: 0; */
+}
+
+#carousel .hideRight img {
+    width: 110px;
+}
+
+#carousel .prev {
+    z-index: 5;
+    left: 80px;
+}
+
+#carousel .prev img {
+    width: 110px;
+}
+
+#carousel .prevLeftSecond {
+    z-index: 4;
+    left: -55px;
+}
+
+#carousel .prevLeftSecond img {
+    width: 110px;
+}
+
+#carousel .selected {
+    z-index: 1;
+    left: 215px;
+    height: 90%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#carousel .next {
+    z-index: 5;
+    left: 415px;
+}
+
+#carousel .next img {
+    width: 110px;
+}
+
+#carousel .nextRightSecond {
+    z-index: 4;
+    left: 550px;
+}
+
+#carousel .nextRightSecond img {
+    width: 110px;
+}
+
+#carousel .selected section span {
+    color: rgb(233, 233, 233);
+    font-size: 1.5em;
+    font-weight: 100;
+    margin-left: 5px;
+}
+
+#carousel :not(.selected) section span {
+    display: none;
+}
+
+#carousel :not(.selected) .gameInfo {
+    display: none;
+}
+
+#carousel .selected .gameInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#carousel .selected .left h1 {
+    color: white;
+    font-weight: 100;
+    font-size: 1.5em;
+    margin: 40px 0;
+}
+
+#carousel .selected .left .buttonLeft a {
+    background-color: rgba(255, 255, 255, 0.089);
+    color: white;
+    font-size: 2em;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+#carousel .selected .left .buttonLeft a:nth-child(1) {
+    padding: 10px 100px;
+}
+
+#carousel .selected .left .buttonLeft a:nth-child(2) {
+    padding: 10px 15px;
+}
+
+#carousel .selected .right .cover {
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 0;
+}
+
+#carousel .selected .right .cover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: linear-gradient(to bottom, transparent 45%, #000);
+}
+
+#carousel .selected .right .cover span:nth-child(1) {
+    z-index: 1;
+    color: white;
+    border: 2px solid white;
+    width: fit-content;
+    padding: 2px 8px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+#carousel .selected .right .cover span:nth-child(2) {
+    z-index: 1;
+    color: black;
+    background-color: white;
+    width: fit-content;
+    padding: 2px 8px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+#carousel .selected#sackboyGame .right .cover {
+    background-image: url(/assets/images/game-thumbnail-sackboy.png);
+}
+
+#carousel .selected#spidermanGame .right .cover {
+    background-image: url(/assets/images/game-thumbnail-spider-man.png);
+}
+
+#carousel .selected#watchdogsGame .right .cover {
+    background-image: url(/assets/images/game-thumbnail-watch-dogs.png);
+}
+
+#carousel .selected#treizeGame .right .cover {
+    background-image: url(/assets/images/game-thumbnail-XIII.png);
+}
+
+#carousel .selected#yakuzaGame .right .cover {
+    background-image: url(/assets/images/game-thumbnail-yakuza.png);
+}
+
+#carousel .selected#demonsGame .right .cover {
+    background-image: url(/assets/images/game-thumbnail-demons-souls.png);
+}
+
+#carousel .selected#dirtGame .right .cover {
+    background-image: url(/assets/images/game-thumbnail-dirt-5.png);
+}
+
+#carousel .selected .right .trophy {
+    color: #acacac;
+    width: 300px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#carousel .selected .right .trophy div {
+    display: flex;
+    flex-direction: column;
+}
+
+#carousel .selected .right .trophy .progress span:nth-child(2),
+#carousel .selected .right .trophy .win span:nth-child(2) {
+    font-size: 1.8em;
+    font-weight: 200;
+    color: white;
+}
+
+#carousel .selected .right .trophy .win span:nth-child(2) {
+    text-align: right;
+}
