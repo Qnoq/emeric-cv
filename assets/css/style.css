@@ -11,7 +11,7 @@ body {
     width: 100%;
     font-family: "Poppins";
     background-size: cover;
-    background-image: url(/assets/images/bg-XIII.png);
+    background-image: url(assets/images/bg-XIII.png);
     overflow: hidden;
 }
 
@@ -246,31 +246,31 @@ header .time {
 }
 
 #carousel .selected#sackboyGame .right .cover {
-    background-image: url(/assets/images/game-thumbnail-sackboy.png);
+    background-image: url(assets/images/game-thumbnail-sackboy.png);
 }
 
 #carousel .selected#spidermanGame .right .cover {
-    background-image: url(/assets/images/game-thumbnail-spider-man.png);
+    background-image: url(assets/images/game-thumbnail-spider-man.png);
 }
 
 #carousel .selected#watchdogsGame .right .cover {
-    background-image: url(/assets/images/game-thumbnail-watch-dogs.png);
+    background-image: url(assets/images/game-thumbnail-watch-dogs.png);
 }
 
 #carousel .selected#treizeGame .right .cover {
-    background-image: url(/assets/images/game-thumbnail-XIII.png);
+    background-image: url(assets/images/game-thumbnail-XIII.png);
 }
 
 #carousel .selected#yakuzaGame .right .cover {
-    background-image: url(/assets/images/game-thumbnail-yakuza.png);
+    background-image: url(assets/images/game-thumbnail-yakuza.png);
 }
 
 #carousel .selected#demonsGame .right .cover {
-    background-image: url(/assets/images/game-thumbnail-demons-souls.png);
+    background-image: url(assets/images/game-thumbnail-demons-souls.png);
 }
 
 #carousel .selected#dirtGame .right .cover {
-    background-image: url(/assets/images/game-thumbnail-dirt-5.png);
+    background-image: url(assets/images/game-thumbnail-dirt-5.png);
 }
 
 #carousel .selected .right .trophy {
